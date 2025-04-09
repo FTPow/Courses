@@ -1,0 +1,103 @@
+Existen tres áreas: la de trabajo donde modificamos todo el código, la lista de espera o staging y finalmente los repositorios
+
+git config --global user.name <Nombre> -> Establece el nombre de usuario
+
+git config --global user.email "<correo>" -> Establece el correo electrónico del usuario
+
+git config --global core.autocrlf <comando> -> Establecer en "true" si se usa win y en "input" si se usa otro SO
+
+git config --global core.editor "code --wait" -> Establece a VSC como editor de código y establece que debemos guardar y cerrar su ventana para confirmar los cambios cuando haga falta
+
+git config --global color.ui true -> Activa los colores
+
+cd <carpeta> -> Abre una carpeta
+
+cd .. -> Retrocede una carpeta
+
+git init -> Inicia el directorio actual como la rama principal del repositorio
+
+git status -> Muestra el estado actual de los cambios en el directorio
+
+git status -s -> Muestra el estado actual de los cambios en el directorio de forma mas limpia y resumida
+
+rm <archivo> -> Elimina un archivo
+
+mkdir <carpeta> -> Crea una carpeta
+
+rmdir <carpeta> -> Elimina una carpeta
+
+git add <archivo> -> Añade un archivo a la lista de espera para hacer commit
+
+git add "carpeta/" -> Añade un archivo a la lista de espera para hacer commit (las comillas se colocan cuando un archivo o carpeta tiene espacio)
+
+git commit -m "mensaje" -a -> Confirma los cambios y los guarda en el repositorio con el mensaje escrito
+
+git commit -> Confirma los cambios y los guarda en el repositorio al escribir el mensaje en el editor de código, guardarlo y cerrarlo
+
+git restore <archivo> -> Restaura un archivo eliminado desde el ultimo commit
+
+git restore --staged <archivo> -> Restaura un archivo desde el área de staging y lo quita de esta
+
+git checkout <archivo> -> Checa si un archivo modificado es exactamente igual a su versión de la lista de espera y si no es así lo restaura desde el ultimo commit realizado, también puede utilizarse para restaurar un commit eliminado y posteriormente guardarlo en otra rama distinta a la master
+
+git reset --hard -> Resetea todos los archivo desde el ultimo commit, incluyendo sus modificaciones en la lista de espera
+
+git mv <nombre viejo> <nombre nuevo> -> Cambia el nombre de un archivo o directorio
+
+git show <archivo> -> Muestra la info de un archivo ya commiteado
+
+git log -> Muestra la info y el id de los commits realizados
+
+git log --oneline -> Muestra la info y el id de los commits realizados de manera abreviada
+
+git config --global core.abbrev <numero> -> Configura el numero de caracteres al cual se abreviaran los id de cada commit
+
+git diff <id commit 1> <id commit 2> -> Muestra los cambios realizados entre ambos commits
+
+git diff --name-only <id commit 1> <id commit 2> -> Muestra el nombre de los archivos modificados entre ambos commits
+
+git diff --word-diff <id commit 1> <id commit 2> -> Muestra las diferencias entre las líneas de código de cada commit
+
+git commit --amend -> Permite modificar el mensaje del último commit realizado y si hay modificaciones en la lista de espera, sobreescriben lo que ya estaba en el commit antes de ejecutar este comando. Este comando elimina el último commit relizado y lo reemplaza con el que estemos haciendo
+
+git reset --soft <id commit> -> Mueve el puntero HEAD hasta el commit indicado y elimina los que venian después moviendo todas sus modificaciones al área de staging
+
+git reset --soft head~<numero> -> Indica que el puntero HEAD retroceda tantos números como le indiquemos y los cambios eliminados se suben al área de staging
+
+git reset --mixed <id commit> -> Mueve el puntero HEAD hasta el commit indicado y elimina los que venian después sin agregarlos al área de staging
+
+git reset --hard <id commit> -> Resetea todos los archivo desde el commit seleccionado, incluyendo sus modificaciones en la lista de espera y el área de trabajo. Elimina los commits posteriores al seleccionado
+
+Al hacer resets, luego de especificar que tipo de reset se usará, podemos usar el comando HEAD~<numero> para retoceder el puntero, tantos números como le indiquemos
+
+También es interesante e importante saber que gracias a reset hard podemos incluso recuperar un commit que hayamos eliminado simplemente indicando su hash
+
+git reflog -> Con esto podemos ver detalladamente un historial de todos los commits, creados, modificados y eliminados
+
+git branch -> Muestra todas las ramas creadas
+
+git Branch <Nombre-de-la-rama> -> Crea una nueva rama
+
+git switch <Nombre-de-la-rama> -> Sirve para movernos de una rama a otra
+
+git switch -c <Nombre-de-la-rama> -> Crea una nueva rama e inmediatamente nos mueve a ella
+
+git branch -d <Nombre-de-la-rama> -> Elimina una rama creada
+
+git branch -m <Nombre-de-la-rama-existente> <Nuevo-nombre-de-la-rama> -> Cambia el nombre de una rama ya creada aunque no estemos en ella
+
+git branch -m <Nuevo-nombre-de-la-rama> -> Cambia el nombre de la rama en la que estemos
+
+git merge <Nombre-de-la-rama-a-fusionar> -> Fusiona la rama en la que estemos con el último commit de la rama indicada. (esto se puede deshacer usando git reset --hard <id commit anterior a la fusión>)
+
+git log --oneline --all -> Muestra todos los commits, incluyendo los de las ramas hijas
+
+git ls-tree -r --name-only <id o hash del commit> -> Nos muestra todos los archivos y directorios del commit indicado, si en vez de colocar el hash de un commit colocamos HEAD, selecciona el commit en donde se encuentre el puntero (el ultimo)
+
+git config --global core.excludesfile <ruta y nombre del archivo> -> configura un .gitignore_global 
+
+Hay que recordar que lo específico tiene prioridad ante lo global
+
+git config --global alias.<alias> "<comando>" -> Permite guardar un comando largo en uno mas simple a través de un alias
+
+git log-op -> Alias configurado por mí para mostrar un log mejorado

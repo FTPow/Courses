@@ -94,6 +94,8 @@ git log --oneline --all -> Muestra todos los commits, incluyendo los de las rama
 
 git ls-tree -r --name-only <id o hash del commit> -> Nos muestra todos los archivos y directorios del commit indicado, si en vez de colocar el hash de un commit colocamos HEAD, selecciona el commit en donde se encuentre el puntero (el ultimo)
 
+ls -> Nos muestra el contenido de la carpeta en la que nos ubicamos
+
 git config --global core.excludesfile <ruta y nombre del archivo> -> configura un .gitignore_global 
 
 Hay que recordar que lo específico tiene prioridad ante lo global
@@ -101,3 +103,7 @@ Hay que recordar que lo específico tiene prioridad ante lo global
 git config --global alias.<alias> "<comando>" -> Permite guardar un comando largo en uno mas simple a través de un alias
 
 git log-op -> Alias configurado por mí para mostrar un log mejorado
+
+git clone <direccion del repositorio> -> Nos permite clonar todo un repositorio en nuestra computadora
+
+code . -> Abre el editor de código VSC

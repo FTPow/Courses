@@ -114,4 +114,4 @@ git push origin <nombre de la rama> -> Sube los cambios realizados en el ultimo 
 
 git pull -> Descarga y actualiza los cambios hechos en el repositorio remoto en nuestro repositorio local, esto no sobreescribe lo que se haya añadido a los archivos en el área de trabajo, pero sí los cambios modificados
 
-Estos últimos dos comandos se configuran agregando -u origin <Nombre-de-la-rama>
+Estos últimos dos comandos se configuran agregando -u origin <Nombre-rama>

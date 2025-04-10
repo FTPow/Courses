@@ -1,0 +1,8 @@
+# Asi se hacen comentarios
+# el siguiente archivo sera ignorado:
+ignorar.txt 
+# si quisieramos ignorar todos los archivos que terminen en una extension especifica colocamos un asterisco seguido de la extension que deseamos ignorar:
+*.txt
+# el siguiente archivo se agregara como una excepcion para que no sea ignorado:
+!Comandos Git.txt
+# tambien se pueden ignorar carpetas directorio/ o un archivo especifico dentro de ese directorio, ademas, tambien pueden ignorarse archivos que tengan una terminacion especifica *hola.txt, todos los que terminen en hola.txt se ignoran

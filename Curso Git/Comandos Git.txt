@@ -104,8 +104,14 @@ git config --global alias.<alias> "<comando>" -> Permite guardar un comando larg
 
 git log-op -> Alias configurado por mí para mostrar un log mejorado
 
+El alias configurado contiene el siguiente comando: "log --oneline --graph --all --pretty=format:'%C(auto)%h%d %s %C(black)%C(bold)%cr'"
+
 git clone <direccion del repositorio> -> Nos permite clonar todo un repositorio en nuestra computadora
 
 code . -> Abre el editor de código VSC
 
-git push origin <nombre de la rama> -> Sube los cambios realizados en el ultimo commit al origen que hayamos clonado en la rama especificada
+git push origin <nombre de la rama> -> Sube los cambios realizados en el ultimo commit al origen que hayamos clonado en la rama especificada. Realmente no hace falta escribir origin y el nombre de la rama, es solo por si a caso, igualmente para el siguiente comando luego del pull.
+
+git pull -> Descarga y actualiza los cambios hechos en el repositorio remoto en nuestro repositorio local, esto no sobreescribe lo que se haya añadido a los archivos en el área de trabajo, pero sí los cambios modificados
+
+Estos últimos dos comandos se configuran agregando -u origin <Nombre-de-la-rama>

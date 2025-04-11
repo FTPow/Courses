@@ -112,6 +112,12 @@ code . -> Abre el editor de código VSC
 
 git push origin <nombre de la rama> -> Sube los cambios realizados en el ultimo commit al origen que hayamos clonado en la rama especificada. Realmente no hace falta escribir origin y el nombre de la rama, es solo por si a caso, igualmente para el siguiente comando luego del pull.
 
-git pull -> Descarga y actualiza los cambios hechos en el repositorio remoto en nuestro repositorio local, esto no sobreescribe lo que se haya añadido a los archivos en el área de trabajo, pero sí los cambios modificados
+git pull -> Nos sincroniza el repositorio local con el último commit hecho en el repositorio remoto. Este comando es una combinación de git fetch y git merge. Ojito de donde está ubicado el puntero HEAD porque si lo detecta en este ultimo commit hecho en el repositorio remoto, dirá que no hay cambios aunque sí los hayamos hecho en nuestra área de trabajo. Además si hay cambios tanto en
 
 Estos últimos dos comandos se configuran agregando -u origin <Nombre-rama>
+
+git fetch -> Nos crea una rama llamada origin/master en nuestro repositorio local, con la finalidad de comparar cambios, para posteriormente hacer un pull y elegir como queremos actualizar el código dependiendo de los cambios realizados tanto en nuestro repositorio local como en el remoto.
+
+Para cambiar a la rama del repositorio remoto luego del git fetch, debemos usar el siguiente comando:
+
+git switch --detach origin/master

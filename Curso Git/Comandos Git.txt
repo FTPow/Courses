@@ -26,6 +26,10 @@ mkdir <carpeta> -> Crea una carpeta
 
 rmdir <carpeta> -> Elimina una carpeta
 
+touch <archivo.extension> -> Crea un archivo
+
+cat <archivo> -> Nos muestra el código de un archivo
+
 git add <archivo> -> Añade un archivo a la lista de espera para hacer commit
 
 git add "carpeta/" -> Añade un archivo a la lista de espera para hacer commit (las comillas se colocan cuando un archivo o carpeta tiene espacio)
@@ -82,6 +86,8 @@ git switch <Nombre-de-la-rama> -> Sirve para movernos de una rama a otra
 
 git switch -c <Nombre-de-la-rama> -> Crea una nueva rama e inmediatamente nos mueve a ella
 
+Esto también puede hacerse con git chekout <rama> para movernos entre ramas y git checkout -b <rama> para crear una nueva rama
+
 git branch -d <Nombre-de-la-rama> -> Elimina una rama creada
 
 git branch -m <Nombre-de-la-rama-existente> <Nuevo-nombre-de-la-rama> -> Cambia el nombre de una rama ya creada aunque no estemos en ella
@@ -121,3 +127,89 @@ git fetch -> Nos crea una rama llamada origin/master en nuestro repositorio loca
 Para cambiar a la rama del repositorio remoto luego del git fetch, debemos usar el siguiente comando:
 
 git switch --detach origin/master
+
+git remote add <origin-u-otro-nombre> <direccion del repo remoto> -> Nos agrega una conexión con un repo remoto
+
+este comando seguido de git Branch -M main (cambia el nombre de la rama actual a main, esto porque normalmente main es el nombre por defecto de la rama principal en GitHub), y git push -u origin/main (para hacer un push y el -u para configurar que siempre se haga a origin/main), nos permite migrar un repo local y subirlo a GitHub como uno remoto
+
+git remote -v -> Nos muestra los comandos que podemos ejecutar para el repo remoto conectado
+
+git stash -> Guarda todo el área de trabajo en el área de stash, lo que permite guardar cosas temporalmente sin necesidad de hacer un commit
+
+git stash list -> Nos muestra una lista de los stash realizados y sus id o hash
+
+git stash show <stash> -> Nos muestra los cambios realizados en un stash específico (Si no se especifica nada se aplica al mas reciente)
+
+git stash pop <stash> -> Elimina un stash espécifico y lo aplica al área de trabajo
+
+git stash apply <stash> -> Aplica un stash al área de trabajo sin eliminarlo
+
+git stash drop <stash> -> Elimina un stash
+
+Git stash sirve también para traer toda el área de trabajo de una rama a la otra, esto se puede hacer directamente con el siguiente comando:
+
+git stash branch <Nombre-de-la-rama> <stash-si-queremos-hacerlo-con-uno-especifico>
+
+git stash clear -> Elimina todos los stash creados
+
+git cherry-pick <commit> -> Agarra un commit específico de una rama y trae solamente ese commit a otra rama, a diferencia de merge que trae todos y las fusiona
+
+git rebase <rama> -> Usar cuando se esté trabajando con una rama secundaria y sea necesario actualizar sus cambios con respecto a la rama master, lo que hace este comando es que copia los commits de la rama especificada en la rama en la que estemos y posiciona los commits de esta ultima al final de la primera antes mencionada
+
+git rebase -i <commit> -> Abre el editor de código y nos permite elegir un commit para fusionar con el resto y hacer squash
+
+git tag <nombre-tag> <hash-commit> -> Nos deja colocarle un tag simple a un commit
+
+git tag -a <tag> <commit> -> Nos deja colocar un mensaje mas detallado para el tag a traves del editor de codigo
+
+git show <tag/commit> -> nos muestra toda la info relacionada al tag o commit especificado
+
+git tag -> Nos muestra los tags creados
+
+git tag -d <tag> -> Nos permite borrar un tag
+
+git submodule add <direccion-html> <vendor/nombre-de-la-carpeta> -> Nos permite añadir un submodulo con código de terceros en la carpeta vendor de nuestro repositorio local. Los submodulos nos permiten incluir código de terceros sin necesidad de agregar el contenido del mismo a nuestro repositorio remoto
+
+Al clonar un repositorio con submodulos, solamente se copian sus carpetas vacías sin el contenido, por loque se deben de ejecutar los siguientes comandos para descargar el código correspondiente de los respectivos submodulos:
+
+git submodule init
+
+git submodule update
+
+git submodule -> Nos muestra los submodulos de nuestro repositorio
+
+Con git pull podemos actualizar los submodulos
+
+git bisect start -> Inicia el bisect, lo que nos permite detectar desde que commit existe un fallo específico
+
+git bisect bad <commit> -> Indicamos que este commit tiene un error
+
+git bisect Good <commit> -> Indicamos que este commit funciona correctamente
+
+Hacemos esto hasta que nos indique a partir de que commit existe el fallo y finalmente reiniciamos bisect con el siguiente comando:
+
+git bisect reset
+
+Git Flow se compone de 5 ramas principales: La main donde se suben las versiones finales ya revisadas, la hotfix que sale de main y es para solucionar problemas críticos encontrados, la develop donde estaremos desarrollando el código, las feature en donde se agregan nuevas funcionalidades y parte de la rama develop, y la reléase donde se suben las versiones desarrolladas en la rama develop con la finalidad de revisarlas y posteriormente subirlas a la rama main
+
+git Flow init -> Inicializa gitflow y prepara las ramas
+
+git Flow feature start <nombre-rama> -> Inicia una nueva rama feature
+
+git Flow feature finish <nombre-rama> -> Finaliza una rama feature y la fusiona con develop
+
+git Flow release start <rama> -> Inicia una nueva rama release
+
+git Flow release finish <rama> -> Finaliza una rama release y la fusiona con master
+
+git Flow hotfix start <rama> -> Inicia una nueva rama hotfix
+
+git Flow hotfix finish <rama> -> Finaliza una rama hotfix y la fusiona con master
+
+
+
+Por aprender:
+
+git hooks
+
+Página para practicar con graficos: https://git-school.github.io/visualizing-git/#free

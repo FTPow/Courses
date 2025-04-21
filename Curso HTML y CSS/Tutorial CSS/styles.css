@@ -1,0 +1,23 @@
+/* Primeramente debemos indicar a que elementos o etiquetas vamos a modificar, por ejemplo, los párrafos <p>, luego abrimos y cerramos llaves {} y dentro de estas colocamos las propiedades que queremos modificar */
+
+p {
+    color: blue;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* A continuación vamos a modificar las propiedades de unas clases en específico. Para ello, en vez de colocar primero el nombre de la etiqueta, colocamos un punto (.) y el nombre de la clase */
+
+.tengo {
+    color : green;
+}
+
+.no-tengo {
+    color : red;
+}
+
+/* Por último, vamos a modificar las propiedades de un id en específico. Para ello, en vez de colocar primero el nombre de la etiqueta, colocamos una almohadilla (#) y el nombre del id */
+
+#opcional {
+    color : purple;
+}

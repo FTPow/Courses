@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!--Esto es un comentario para indicar que la etiqueta presente en esta línea siempre irá en la primera línea y le indica al navegador que estamos utilizando html5-->
+<html> <!--Etiqueta que indica el inicio del documento html-->
+    <head>  <!--Etiqueta que contiene información sobre los metadatos del documento html, como el título y los enlaces a hojas de estilo, etc-->
+        <title>Curso HTML y CSS</title> <!--Etiqueta que indica el título del documento html, que se mostrará en la pestaña del navegador-->
+    </head>
+    <body> <!--Etiqueta que indica el inicio del cuerpo del documento html, donde se encuentra el contenido visible de la página web-->
+        <h1>Hola pana mío</h1> <!--Etiqueta que indica un encabezado de nivel 1, que es el más importante de toda la página web y solo debe usarse 1 vez, luego le siguen desde el h2 hasta el h6-->
+        <h2>Este es el primer subtítulo</h2> <!--Etiqueta que indica un encabezado de nivel 2, que es el segundo más importante de toda la página web y puede usarse varias veces-->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione distinctio quod, quae dignissimos eligendi, sint, molestiae sunt aut unde fugiat tempora voluptate nihil deleniti consequatur similique necessitatibus dolores? Reiciendis, accusantium?</p> <!--Etiqueta que indica un párrafo, que es un bloque de texto que se separa del resto del contenido por un espacio vertical. El texto dentro de la etiqueta p se mostrará en un bloque separado y con un margen superior e inferior por defecto-->
+        <ol> <!--Etiqueta que indica una lista ordenada, que es una lista de elementos numerados. Cada elemento de la lista se define con la etiqueta li-->
+            <li>Elemento 1</li> <!--Etiqueta que indica un elemento de la lista ordenada-->
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ol>
+        <ul> <!--Etiqueta que indica una lista desordenada, que es una lista de elementos con viñetas. Cada elemento de la lista se define con la etiqueta li-->
+            <li>Elemento 1</li> <!--Etiqueta que indica un elemento de la lista desordenada-->
+            <li>Elemento 2</li>
+            <li>Elemento 3</li>
+        </ul>
+        <a href="https://www.google.com" target="_blank">Enlace a Google</a> <!--Etiqueta que indica un enlace a otra página web. El atributo href indica la URL de destino, si no colocamos "https://", va a buscar la ruta en nuestro directorio actual. Por otro lado, el atributo target indica que el enlace se abrirá en una nueva pestaña, si en cambio dijera "_self" o de por sí no estuviera el atributo target, el enlace se abriría en la misma pestaña en la que estamos-->
+        <br>
+        <a href="subcarpeta/gatitos.html">Ir a la página de gatitos</a> <!--Etiqueta que indica un enlace a otra página web. En este caso, la URL de destino es una ruta relativa a la ubicación del archivo actual. Si el archivo gatitos.html estuviera en la misma carpeta que el archivo actual, podríamos usar simplemente "gatitos.html" como URL de destino, en cambio si estuviera en una carpeta mas arriba de la actual usamos "../gatitos.html"-->
+        <hr> <!--Etiqueta que indica una línea horizontal, que se utiliza para separar el contenido en diferentes secciones. Se puede usar para dividir el contenido de la página web en diferentes partes-->
+        <br> <!--Etiqueta que indica un salto de línea, que se utiliza para separar el contenido en líneas diferentes sin crear un nuevo párrafo-->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFUAfyVe3Easiycyh3isP9wDQTYuSmGPsPQvLIJdEYvQ_DsFq5Ez2Nh_QjiS3oZ3B8ZPfK9cZQyIStmQMV1lDPLw" title="Imagen de un perrito para ejemplo" alt="Imagen de un perrito para ejemplo"> <!--Etiqueta que indica una imagen. El atributo src indica la URL de la imagen y el atributo alt proporciona un texto alternativo que se mostrará si la imagen no se puede cargar. Adicionalmente, el atributo title puede usarse con alquier etiqueta y nos muestra el texto que hayamos colocado al tener el mouse sobre el elemento de esta etiqueta principal, comúnmente se usa para imágenes y enlaces-->
+        <br>
+        <strong>Texto en negrita</strong> <!--Etiqueta que indica que el texto dentro de ella debe mostrarse en negrita. Se puede usar para resaltar palabras o frases importantes-->
+        <em>Texto en cursiva</em> <!--Etiqueta que indica que el texto dentro de ella debe mostrarse en cursiva. Se puede usar para resaltar palabras o frases importantes, pero con un énfasis diferente al de la etiqueta strong-->
+        <b>Texto en negrita</b> <!--Etiqueta que indica que el texto dentro de ella debe mostrarse en negrita. Se puede usar para resaltar palabras o frases importantes, pero no tiene el mismo significado semántico que la etiqueta strong-->
+        <i>Texto en cursiva</i> <!--Etiqueta que indica que el texto dentro de ella debe mostrarse en cursiva. Se puede usar para resaltar palabras o frases importantes, pero no tiene el mismo significado semántico que la etiqueta em-->
+        <form action=""> <!--Etiqueta que indica un formulario, que es un conjunto de campos de entrada que permiten al usuario enviar datos a un servidor. El atributo action indica la URL a la que se enviarán los datos del formulario cuando se envíe. Si no se especifica, el formulario se enviará a la misma URL en la que se encuentra-->
+            <input type="text" placeholder="Campo de texto" name="username"> <!--Etiqueta que indica un campo de entrada de texto, donde el usuario puede escribir información. El atributo type indica el tipo de campo de entrada, en este caso "text" indica que es un campo de texto. El atributo placeholder proporciona un texto de ejemplo que se mostrará dentro del campo hasta que el usuario escriba algo. El atributo name nos permite colocarle un identificador que debe ser único a cada input-->
+            <br>
+            <input type="password" placeholder="Campo de contraseña" required name="password" minlength="6"> <!--Etiqueta que indica un campo de entrada de contraseña, donde el usuario puede escribir una contraseña. El atributo type indica el tipo de campo de entrada, en este caso "password" indica que es un campo de contraseña y el texto que escriba el usuario se mostrará como puntos o asteriscos. El atributo required nos indica que este es un campo obligatorio. El atributo minlength, indica cuantos caracteres deb tener el input como mínimo antes de enviarlo-->
+            <br>
+            <input type="email" placeholder="Campo de correo electrónico" required name="email"> <!--Etiqueta que indica un campo de entrada de correo electrónico, donde el usuario puede escribir una dirección de correo electrónico. El atributo type indica el tipo de campo de entrada, en este caso "email" indica que es un campo de correo electrónico y el navegador puede validar la dirección de correo electrónico ingresada-->
+            <br>
+            <input type="number" placeholder="Campo de número" name="number"> <!--Etiqueta que indica un campo de entrada de número, donde el usuario puede escribir un número. El atributo type indica el tipo de campo de entrada, en este caso "number" indica que es un campo de número y el navegador puede validar el número ingresado-->
+            <br>
+            <input type="date" placeholder="Campo de fecha" name="date"> <!--Etiqueta que indica un campo de entrada de fecha, donde el usuario puede seleccionar una fecha. El atributo type indica el tipo de campo de entrada, en este caso "date" indica que es un campo de fecha y el navegador puede mostrar un selector de fecha-->
+            <br>
+            <input type="color" placeholder="Campo de color" name="color"> <!--Etiqueta que indica un campo de entrada de color, donde el usuario puede seleccionar un color. El atributo type indica el tipo de campo de entrada, en este caso "color" indica que es un campo de color y el navegador puede mostrar un selector de color-->
+            <br>
+            <input type="checkbox" placeholder="Campo de verificación" name="checkbox"> <!--Etiqueta que indica un campo de entrada de verificación, donde el usuario puede seleccionar o deseleccionar varias opciones. El atributo type indica el tipo de campo de entrada, en este caso "checkbox" indica que es un campo de verificación y el navegador mostrará una casilla de verificación-->
+            <br>
+            <input type="radio" placeholder="Campo de opción" name="radio"> <!--Etiqueta que indica un campo de entrada de opción, donde el usuario puede seleccionar una opción de un grupo de opciones. El atributo type indica el tipo de campo de entrada, en este caso "radio" indica que es un campo de opción y el navegador mostrará un botón de opción-->
+            <br>
+            <input type="file" placeholder="Campo de archivo" name="file"> <!--Etiqueta que indica un campo de entrada de archivo, donde el usuario puede seleccionar un archivo para cargar. El atributo type indica el tipo de campo de entrada, en este caso "file" indica que es un campo de archivo y el navegador mostrará un botón para seleccionar un archivo-->
+            <br>
+            <input type="submit" value="Enviar"> <!--Etiqueta que indica un botón de envío, que se utiliza para enviar los datos del formulario. El atributo type indica el tipo de botón, en este caso "submit" indica que es un botón de envío y el atributo value proporciona el texto que se mostrará en el botón. El atributo value por defecto es la palabra "Enviar" en el idioma del navegador-->
+            <br>
+            <input type="reset" value="Restablecer"> <!--Etiqueta que indica un botón de restablecimiento, que se utiliza para restablecer los datos del formulario a sus valores predeterminados. El atributo type indica el tipo de botón, en este caso "reset" indica que es un botón de restablecimiento y el atributo value proporciona el texto que se mostrará en el botón. El atributo value por defecto es la palabra "Restablecer" en el idioma del navegador-->
+            <br>
+            <input type="button" value="Botón"> <!--Etiqueta que indica un botón, que se utiliza para realizar una acción específica. El atributo type indica el tipo de botón, en este caso "button" indica que es un botón normal y el atributo value proporciona el texto que se mostrará en el botón. Este botón no enviará el formulario ni restablecerá los datos del formulario-->
+            <br>
+
+        </form> 
+    </body>
+</html>

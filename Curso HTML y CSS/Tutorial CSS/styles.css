@@ -1,15 +1,22 @@
 /* Primeramente debemos indicar a que elementos o etiquetas vamos a modificar, por ejemplo, los párrafos <p>, luego abrimos y cerramos llaves {} y dentro de estas colocamos las propiedades que queremos modificar */
 
 p {
-    color: blue;
+    color: firebrick;
+    font-family: Poet, sans-serif; /* tipo de letra primaria y secundaria */
     font-size: 20px;
     text-align: center;
+    /* font-weight: bolder;  */ /* negrita */
+    font-style: italic;
+    line-height: 1.5; /* espacio entre líneas */
+    letter-spacing: 1px; /* espacio entre letras */
+    text-transform: capitalize; /* capitalizar la primera letra de cada palabra */
 }
 
 /* A continuación vamos a modificar las propiedades de unas clases en específico. Para ello, en vez de colocar primero el nombre de la etiqueta, colocamos un punto (.) y el nombre de la clase */
 
 .tengo {
     color : green;
+    text-decoration: line-through; /* tachado */
 }
 
 .no-tengo {
@@ -20,4 +27,31 @@ p {
 
 #opcional {
     color : purple;
+}
+
+.caja1 {
+    border: 2px solid black; /* borde, primero va el grosor, luego el estilo y por último el color */
+    border-radius: 10px; /* bordes redondeados */
+    /* width: 125px; ancho */
+    /* height: 50px; alto */
+    display: block; /* para que el contenido se acomode en una sola línea */
+    padding: 20px 10px; /* espacio entre el borde y el contenido. Este afecta el tamaño total del elemento, al ser un short hand, los valores del padding se asignan en el sentido de las agujas del reloj, es decir arriba, derecha, abajo, izquierda. Si solo se colocara un valor se asignaría a todos los lados, y si se colocan 2 valores, el primero afectaria arriba y abajo y el segundo izquierda y derecha */
+    margin: 20px; /* espacio entre el borde y el resto de la página */
+}
+
+.caja2 {
+    background: lightblue; /* color de fondo */
+    /* width: 125px; ancho */
+    /* height: 50px; alto */
+    display: block; /* para que el contenido se acomode en una sola línea */
+    padding: 40px 20px; /* espacio entre el borde y el contenido. Este afecta el tamaño total del elemento, al ser un short hand, los valores del padding se asignan en el sentido de las agujas del reloj, es decir arriba, derecha, abajo, izquierda. Si solo se colocara un valor se asignaría a todos los lados, y si se colocan 2 valores, el primero afectaria arriba y abajo y el segundo izquierda y derecha */
+}
+
+.formulario {
+    background: lightgray; /* color de fondo */
+    border: 2px solid black; /* borde */
+    border-radius: 10px; /* bordes redondeados */
+    display: block; /* para que el contenido se acomode en una sola línea */
+    padding: 20px; /* espacio entre el borde y el contenido. Este afecta el tamaño total del elemento*/
+    margin: 20px; /* espacio entre el borde y el resto de la página */
 }

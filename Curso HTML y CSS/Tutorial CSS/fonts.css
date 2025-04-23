@@ -1,0 +1,8 @@
+@font-face { /* Definición de una fuente personalizada */
+    font-family: 'Poet'; /* Nombre de la fuente. Puede ser el que yo quiera */
+    src: url(fonts/PoetsenOne-Regular.ttf) format("truetype"); /* URL de la fuente. Puede ser una fuente local o una fuente de Google Fonts */
+    font-weight: normal; /* Peso de la fuente. Puede ser normal, bold, bolder, lighter, etc. */
+    font-style: normal; /* Estilo de la fuente. Puede ser normal, italic, oblique, etc. */
+} 
+
+/* Gracias a estos parámetros podemos configurar varias propiedades de la misma fuente, para que por ejemplo dependiendo del font-weight que le configuremos, se active una fuente más o menos negrita */

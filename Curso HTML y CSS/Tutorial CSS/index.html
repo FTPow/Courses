@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>Enlace CSS</title>
-        <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Esta etiqueta sirve como enlace al archivo CSS externo -->
+        <link rel="stylesheet" href="styles.css"> <!-- Esta etiqueta sirve como enlace al archivo CSS externo -->
+        <link rel="stylesheet" href="fonts.css">
     </head>
     <body>
         <h1>Hola Mundo</h1>
@@ -14,5 +15,13 @@
             <li class="tengo">Huevo</li>
             <li id="opcional">Esencia de vainilla</li> <!-- El atributo id sirve para asignarle un identificador único a la etiqueta, normalmente esto se hace para una sola etiqueta en específio y no para un grupo como con las clases -->
         </ul>
+        <span class="caja1">Esto es una caja</span>
+        <span class="caja2">Esto es otra caja</span>
+        <span class="caja1 caja2">Esto es una caja con las propiedades de ambas</span>
+        <form class="formulario">
+            <input class="input-formulario" type="email" placeholder="Correo electrónico">
+            <input class="input-formulario" type="password" placeholder="Contraseña">
+            <input class="input-formulario" type="submit" value="Enviar">
+        </form>
     </body>
 </html>

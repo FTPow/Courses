@@ -1,6 +1,6 @@
 /* Primeramente debemos indicar a que elementos o etiquetas vamos a modificar, por ejemplo, los párrafos <p>, luego abrimos y cerramos llaves {} y dentro de estas colocamos las propiedades que queremos modificar */
 
-p {
+.parrafo1 {
     color: firebrick;
     font-family: Poet, sans-serif; /* tipo de letra primaria y secundaria */
     font-size: 20px;
@@ -10,6 +10,15 @@ p {
     line-height: 1.5; /* espacio entre líneas */
     letter-spacing: 1px; /* espacio entre letras */
     text-transform: capitalize; /* capitalizar la primera letra de cada palabra */
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside; /* coloca las viñetas como parte del contenido de la lista */
+    text-align: center;
 }
 
 /* A continuación vamos a modificar las propiedades de unas clases en específico. Para ello, en vez de colocar primero el nombre de la etiqueta, colocamos un punto (.) y el nombre de la clase */
@@ -48,10 +57,71 @@ p {
 }
 
 .formulario {
-    background: lightgray; /* color de fondo */
-    border: 2px solid black; /* borde */
-    border-radius: 10px; /* bordes redondeados */
-    display: block; /* para que el contenido se acomode en una sola línea */
-    padding: 20px; /* espacio entre el borde y el contenido. Este afecta el tamaño total del elemento*/
-    margin: 20px; /* espacio entre el borde y el resto de la página */
+    background: lightgray;
+    border: 2px solid black; 
+    border-radius: 10px; 
+    display: block; 
+    padding: 20px; 
+    margin: 20px; 
 }
+
+.linea {
+    border: 3px solid black;
+    border-radius: 12px;
+    margin: 20px;
+}
+
+.box {
+    width: 125px;
+    height: 125px;
+    margin: 10px;
+    border-radius: 12px;
+    border: 5px solid black;
+}
+
+.box1 {
+    box-sizing: content-box; /* el tamaño del elemento no incluye el padding y el borde. Esta es la propiedad por defecto */
+    background: rgba(225, 60, 150, 75%); /* color de fondo con opacidad */
+    padding: 25px;
+}
+
+.box2 {
+    box-sizing: border-box; /* el tamaño del elemento incluye el padding y el borde y estos últimos no afectan el tamaño de la caja */
+    background: #f6ae; /* color de fondo en hexadecimal, funciona igual que RGBA, primero se coloca uno o dos valores para el rojo, luego para el verde, luego para el azul yluego para la opacidad */
+    padding: 25px;
+}
+
+.notificacion {
+    background: #ccc;
+    border-left: 5px solid #555;
+    padding: 15px 20px;
+    font-family: sans-serif;
+    border-radius: 0px 12px 12px 0px;
+}
+
+.titulo-notificacion {
+    font-size: 22px;
+    font-weight: bolder;
+    margin: 0;
+}
+
+.hora-notificacion {
+    font-size: 15px;
+    color: #555;
+}
+
+.mensaje-notificacion {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.remitente-notificacion {
+    font-size: 16px;
+    margin: 0;
+    text-align: right;
+    color: #555;
+    font-weight: bold;
+}
+
+/* En cuanto a las diferentes unidades de medida,tenemos las absolutas, como px, cm, mm, in y las relativas como los % (depende del tamaño del contenedor), em (depende del tamaño de la fuente de la etiqueta padre mas próxima), rem (depende del tamaño de la fuente de la etiqueta html), y finalmente tenemos vh y vw, que serían relativos a la altura y anchura del viewport respectivamente */

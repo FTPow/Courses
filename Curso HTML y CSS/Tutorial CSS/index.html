@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Hola Mundo</h1>
-        <p>Este es un párrafo de ejemplo. A continuación vamos a tener una lista con los ingredientes para una receta de cocina. Se mostraran en rojo los que aun no tenemos, se mostrarán en verde los que ya poseemos y se mostraran en púrpura los que son opcionales.</p>
+        <p class="parrafo1">Este es un párrafo de ejemplo. A continuación vamos a tener una lista con los ingredientes para una receta de cocina. Se mostraran en rojo los que aun no tenemos, se mostrarán en verde los que ya poseemos y se mostraran en púrpura los que son opcionales.</p>
         <ul>
             <li class="no-tengo">Leche</li> <!-- El atributo class sirve para asignarle una clase a las etiquetas -->
             <li class="tengo">Azúcar</li>
@@ -15,6 +15,7 @@
             <li class="tengo">Huevo</li>
             <li id="opcional">Esencia de vainilla</li> <!-- El atributo id sirve para asignarle un identificador único a la etiqueta, normalmente esto se hace para una sola etiqueta en específio y no para un grupo como con las clases -->
         </ul>
+        <hr class="linea">
         <span class="caja1">Esto es una caja</span>
         <span class="caja2">Esto es otra caja</span>
         <span class="caja1 caja2">Esto es una caja con las propiedades de ambas</span>
@@ -23,5 +24,14 @@
             <input class="input-formulario" type="password" placeholder="Contraseña">
             <input class="input-formulario" type="submit" value="Enviar">
         </form>
+        <hr class="linea">
+        <div class="box box1">box-sizing: content-box</div>
+        <div class="box box2">box-sizing: border-box</div>
+        <hr class="linea">
+        <div class="notificacion">
+            <h2 class="titulo-notificacion">Tienes un nuevo mensaje. <span class="hora-notificacion">(Hace un momento)</span></h2>
+            <p class="mensaje-notificacion">Hola, ¿cómo estás? Espero que estés teniendo un buen día. Quería saber si te gustaría salir a cenar esta noche. Podríamos ir a ese nuevo restaurante que abrieron en el centro. ¿Qué opinas? Me encantaría verte y ponernos al día. Si te parece bien, avísame a qué hora te viene bien. ¡Un abrazo! Espero tu respuesta.</p>
+            <p class="remitente-notificacion">Juan Pérez.</p>
+        </div>
     </body>
 </html>

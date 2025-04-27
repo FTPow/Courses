@@ -125,3 +125,5 @@ ul {
 }
 
 /* En cuanto a las diferentes unidades de medida,tenemos las absolutas, como px, cm, mm, in y las relativas como los % (depende del tamaño del contenedor), em (depende del tamaño de la fuente de la etiqueta padre mas próxima), rem (depende del tamaño de la fuente de la etiqueta html), y finalmente tenemos vh y vw, que serían relativos a la altura y anchura del viewport respectivamente */
+
+/* Con la propiedad background-image: url("") podemos establecer una imagen como el fondo de un elemento */

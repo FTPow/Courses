@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulario de Encuesta</title>
+  </head>
+  <body>
+    <div>
+      <form action="" method="post" id="survey-form">
+        <h1 id="title">Formulario de Encuesta</h1>
+        <p id="description">¡Bienvenidos a mi primer formulario de encuesta!</p>
+        <hr>
+        <label id="name-label" for="name"><p>Nombre</p> 
+          <input placeholder="Ingrese su nombre" required id="name" type="text" name="name">
+        </label>
+        <label id="email-label" for="email"><p>Email</p> 
+          <input placeholder="Ingrese su email" required id="email" type="email" name="email">
+        </label>
+        <label id="number-label" for="number"><p>Edad</p> 
+          <input placeholder="Años" min="10" max="100" required id="number" type="number" name="number">
+        </label>
+        <hr>
+        <label for="dropdown"><p>¿Cuál es su ocupación?</p>
+          <select name="dropdown" id="dropdown">
+            <option value="" selected disabled></option>
+            <option value="Ninguna">Ninguna</option>
+            <option value="estudiante">Estudiante</option>
+            <option value="trabajador">Trabajador</option>
+          </select>
+        </label>
+        <p>¿Eres programador?</p>
+        <label for="no"><input class="inline" checked value="no" id="no" name="programador" type="radio"> Para nada</label>
+        <label for="si"><input class="inline" value="si" id="si" name="programador" type="radio"> Por supuesto</label>
+        <p>¿Qué te gustaría aprender en el futuro?</p>
+        <label for="back"><input class="inline" value="back" name="gustos" id="back" type="checkbox"> Programación Back-End</label>
+        <label for="front"><input class="inline" value="front" name="gustos" id="front" type="checkbox"> Programación Front-End</label>
+        <label for="aparte"><input class="inline" value="aparte" name="gustos" id="aparte" type="checkbox"> Algo más que no sea programación</label>
+        <hr>
+        <label for="about"><p>¡Háblanos más sobre tí!</p><textarea name="about" id="about" rows="4" cols="40" placeholder="Cuentanos ;)"></textarea></label>
+        <hr>
+        <input id="submit" type="submit" value="Enviar">
+      </form>
+    </div>
+  </body>
+</html>

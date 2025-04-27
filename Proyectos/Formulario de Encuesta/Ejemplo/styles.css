@@ -1,0 +1,154 @@
+/* 
+La unidad vh significa viewport height (altura del viewport), y es relativa al 1% de la altura (height) del viewport.
+
+Es hora de engalanar el proyecto con un poco de CSS. Comienza estableciendo para body la propiedad width a 100%, y la propiedad height a 100vh, establece el margin por defecto del body añadido por algunos navegadores a 0.
+*/
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background-color: #1b1b32;
+  color: #f5f6f7;
+  font-family: Tahoma;
+  font-size: 16px;
+}
+
+/*
+La unidad rem significa root (raíz) em, y es relativa al tamaño de fuente del elemento html.
+
+Como los elementos label por defecto son inline, se muestran todos juntos en la misma línea, haciendo difícil su lectura. Para mostrarlos en diferentes líneas, añade display: block al elemento label, y dale a la propiedad margin un valor de 0.5rem 0, para darles un poco de separación.
+*/
+
+label {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/*
+Centra los elementos h1 y p dándoles un margin de 1em auto. Luego, alinea su texto en el center (centro) también.
+*/
+
+h1, p {
+  margin: 1em auto;
+  text-align: center;
+}
+
+/*
+Centra el elemento form, dándole un margin de 0 auto. Luego, fija su tamaño a un ancho máximo de 500px, y un ancho mínimo de 300px. En medio de ese rango, permite que tenga un width de 60vw.
+*/
+
+form {
+  margin: 0 auto;
+  max-width: 500px;
+  min-width: 300px;
+  width: 60vW;
+  padding-bottom: 2em;
+}
+
+/* 
+Durante el desarrollo, es útil ver los bordes por defecto del fieldset. Sin embargo, hacen que el contenido aparezca demasiado separado.
+
+Elimina el border, y agrega un relleno de 2rem solo en la parte superior e inferior de cada fieldset. Asegúrate de eliminar el padding izquierdo y derecho.
+
+Para dar a los elementos fieldset un poco de separación, selecciónalos y dales un border-bottom de 3px solid #3b3b4f.
+*/
+
+fieldset {
+  border: 0;
+  border-bottom: 3px solid #3b3b4f;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-right: 0;
+  padding-left: 0;
+} /* Otra forma: padding: 2rem 0; */
+
+/*
+El borde del último elemento fieldset se ve un poco fuera de lugar. Puedes seleccionar el último elemento de un tipo específico utilizando la pseudo-clase CSS last-of-type, de esta manera:
+
+p:last-of-type { }
+
+Esto seleccionará el último elemento p. Cree un nuevo selector que apunte al último elemento fieldset y establezca su border-bottom a none.
+*/
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+/*
+Sería más estético que el texto del label apareciera encima de los elementos del formulario.
+
+Selecciona todos los elementos input, textarea y select, y haz que ocupen todo el ancho de sus elementos padre.
+
+Además, agrega 10px de margin a la parte superior de los elementos seleccionados. Establece los otros márgenes a 0.
+*/
+
+input, textarea, select {
+  margin: 10px 0 0 0;
+  width: 100%;
+  min-height: 2em;
+}
+
+/*
+Selecciona solos los elementos .inline, y dales un width de unset. Esto eliminará la regla anterior que establece que todos los input tengan un width: 100%.
+
+Agrega un poco de espacio entre los elementos .inline y el texto del label, dando un margin derecho de 0.5em. Además, establece todos los demás márgenes a 0.
+
+Si te fijas bien, te darás cuenta de que los elementos .inline están demasiado arriba en la línea.
+
+Para combatir esto, establezca la propiedad vertical-align a middle.
+*/
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+input, textarea {
+  background-color: #0a0a23;
+  border: 1px solid #0a0a23;
+  color: #ffffff;
+}
+
+/*
+Para dar estilo al botón de envío, puede utilizar un selector de atributos (attribute), que selecciona un elemento basado en el valor del atributo dado. Aquí hay un ejemplo:
+
+input[name="password"]
+Lo anterior selecciona los elementos input con un atributo name con el valor password.
+
+Ahora, utiliza el selector de atributos para dar estilo al botón de envío con un display de block, y un width de 60%.
+
+Con un display de block el botón de envío se sitúa al ras del borde izquierdo de su padre.
+
+Utiliza la misma técnica utilizada para centrar el form para centrar el botón de envío.
+
+Para que el botón de envío se vea más en línea con el resto del formulario, dale el mimo height que los otros campos (2em). Además, aumente el font-size a 1.1rem.
+
+Por último, para el botón de envío, quieres separarlo del fieldset anterior, y ajustar su ancho para que nunca sea inferior a 300px.
+
+Cambia la propiedad margin para incluir 1em en la parte superior e inferior, dejando los márgenes derecho e izquierdo en auto. A continuación ajuste la anchura como se ha descrito anteriormente.
+*/
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  height: 2em;
+  font-size: 1.1rem;
+  background-color: #3b3b4f;
+  border-color: white;
+  margin: 1em auto;
+  min-width: 300px;
+}
+/*
+Usando otro selector de atributos, estiliza el input con un type de file para que tenga el mismo relleno que los otros elementos input.
+*/
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+a {
+  color: #dfdfe2;
+}

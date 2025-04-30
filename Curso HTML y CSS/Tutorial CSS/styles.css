@@ -126,4 +126,96 @@ ul {
 
 /* En cuanto a las diferentes unidades de medida,tenemos las absolutas, como px, cm, mm, in y las relativas como los % (depende del tamaño del contenedor), em (depende del tamaño de la fuente de la etiqueta padre mas próxima), rem (depende del tamaño de la fuente de la etiqueta html), y finalmente tenemos vh y vw, que serían relativos a la altura y anchura del viewport respectivamente */
 
-/* Con la propiedad background-image: url("") podemos establecer una imagen como el fondo de un elemento */
+/* Propiedades del fondo */
+
+.fondo {
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    background-color: transparent; /* color de fondo */
+    background-image: url("https://www.w3schools.com/w3images/lights.jpg"); /* imagen de fondo */
+    background-repeat: no-repeat; /* no repetir la imagen de fondo */
+    background-size: cover; /* cubrir todo el contenedor */
+    background-position: center; /* centrar la imagen de fondo */
+    background-attachment: fixed; /* fijar la imagen de fondo incluso al hacer scroll */
+}
+
+/* Todo esto va en el shorthand background con el siguiente orden: background: image position / size repeat attachmente color, y si no queremos colocar alguna propiedad simplemente continuamos con la siguiente  */
+
+.fondo-gradiente {
+    margin: 0;
+    background: red;
+    width: 100%;
+    padding: 20px;
+}
+
+.titulo-gradiente {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.gradiente {
+    margin: 20px;
+    width: 300px;
+    height: 400px;
+    border-top: 6px solid #900;
+    border-radius: 7px;
+    display: inline-block;
+}
+
+.gradiente1 {
+    background: linear-gradient(transparent, #000a); /* degradado lineal de arriba a abajo, se le pueden agregar porcentajes a cada color para determinar el tamaño */
+}
+
+/* .link{
+    margin: 0;
+    width: 100%;
+    height: 325px;
+} */
+
+.gradiente2 {
+    background: radial-gradient(transparent, #000a); /* degradado radial como viñeta */
+}
+
+.gradiente3 {
+    background: linear-gradient(to right, #fffa, transparent, #000a); /* degradado lineal de izquierda a derecha */
+}
+
+.gradiente4 {
+    background: conic-gradient(#fffa, #000a); /* degradado cónico */
+}
+
+.titulo-gradiente-sombra {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 26px;
+    text-align: center;
+}
+
+.gradiente-sombra {
+    margin: auto;
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;;
+    background: radial-gradient(transparent 5%, #0003);
+    border-top: 6px solid #000;
+    border-radius: 7px;
+    box-shadow: 0 0 40px 0 #0007; /* sombra para cajas, el primer valor es el movimiento a la derecha, el segundo hacia abajo, el tercero el grosor, el cuarto la expansión y el último el color */ 
+}
+
+.parrafo-sombra {
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.5;
+    text-shadow: 0 0 10px #000d; /* sombra para texto, el primer valor es el movimiento a la derecha, el segundo hacia abajo, el tercero el grosor y el último el color */
+}
+
+.pokemon {
+    width: 100%;
+    filter: drop-shadow(0 0 10px #06fd); /* sombra para imágenes sin fondo, el primer valor es el movimiento a la derecha, el segundo hacia abajo, el tercero el grosor y el último el color */
+}

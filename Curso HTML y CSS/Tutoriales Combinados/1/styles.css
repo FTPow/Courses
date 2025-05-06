@@ -1,34 +1,82 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    background: linear-gradient( #222, #111);
 }
 
 .titulo-formulario {
     text-align: center;
     font-size: 2em;
-    margin: 20px 0;
-    color: #666;
+    margin: 10px 0 20px 0 ;
+    color: #444;
+    text-shadow: 0 0 15px #0003;
+
 }
 
 .formulario {
     box-sizing: border-box;
     width: 100%;
     max-width: 500px;
-    margin: auto;
+    margin: 50px auto;
     background: #ededed;
     padding: 10px 20px;
     border-radius: 12px;
-    box-shadow: 0 0 35px #0006;
+    box-shadow: 0 0 35px #fff6;
 }
 
 .input-formulario {
     display: block;
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 5px 0 10px 0;
     box-sizing: border-box;
     border-radius: 5px 12px 12px 5px;
     border: none;
-    border-left: 3px solid #777;
-    box-shadow: 0 0 15px #0001;
+    border-left: 3px solid #444;
+    box-shadow: 0 0 15px #0003;
+}
+
+.textarea-formulario {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 90px;
+    max-height: 90px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+label {
+    font-size: 1.1em;
+    color: #444;
+    text-shadow: 0 0 15px #0003;
+}
+
+.terminos {
+    letter-spacing: 0.1em;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.enviar {
+    margin: 10px 0 10px 0;
+    border-radius: 7px;
+    border: none;
+    background: #fff;
+    font-size: 1em;
+    color: #444;
+}
+
+fieldset {
+    border: 2px solid #444;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 0 0 20px 0;
+    box-shadow: 0 0 15px #0003;
+}
+
+legend {
+    font-size: 1.5em;
+    color: #444;
+    text-shadow: 0 0 15px #0003;
 }

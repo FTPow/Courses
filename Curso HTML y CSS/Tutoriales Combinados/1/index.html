@@ -7,10 +7,52 @@
     <title>Ejemplo Textarea</title>
 </head>
 <body>
-    <h2 class="titulo-formulario">Formulario de contacto</h2>
     <form class="formulario" action="">
-            <input class="input-formulario" type="email" name="email" id="email" placeholder="Correo electrónico" title="Ingrese su email" required>
-            <input class="input-formulario" type="password" name="password" id="password" placeholder="Contraseña" title="Ingrese su contraseña" required>
+        <h2 class="titulo-formulario">Formulario de contacto</h2>
+
+        <fieldset>
+            <legend>Datos de usuario</legend>
+            <!-- Correo electrónico -->
+            <label for="email">Correo electrónico</label>
+            <input class="input-formulario" type="email" name="email" id="email" placeholder="alguien@example.com" title="Ingrese su email" required>
+
+            <!-- Contraseña -->
+            <label for="password">Contraseña</label>
+            <input class="input-formulario" type="password" name="password" id="password" placeholder="******" title="Ingrese su contraseña" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos adicionales</legend>
+            <!-- Lista de datos -->
+            <label for="datalist">Lista de datos</label>
+            <input class="input-formulario" list="datalist" name="datalist" placeholder="Selecciona una opción" required>
+            <datalist id="datalist" name="datalist">
+                <option value="Opción 1">Esta es la primera opción</option>
+                <option value="Opción 2">Esta es la segunda opción</option>
+                <option value="Opción 3">Esta es la tercera opción</option>
+            </datalist>
+
+            <!-- Opciones -->
+            <label for="opciones">Opciones</label>
+            <select class="input-formulario" name="opciones" id="opciones" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="opcion1">Opción 1</option>
+                <option value="opcion2">Opción 2</option>
+                <option value="opcion3">Opción 3</option>
+            </select>
+
+            <!-- Mensaje -->
+            <label for="mensaje">Mensaje</label>
+            <textarea class="input-formulario textarea-formulario" name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Escribe tu mensaje aquí..."></textarea>
+        </fieldset>
+
+        <!-- Términos -->
+        <label class="terminos" for="terminos">
+            <input type="checkbox" name="terminos" id="terminos" required>
+            Acepto los términos y condiciones
+        </label>
+
+        <button class="input-formulario enviar" type="submit">Enviar</button>
     </form>
 </body>
 </html>

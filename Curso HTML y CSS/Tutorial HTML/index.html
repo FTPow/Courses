@@ -74,5 +74,58 @@
                 <li>Elemento 3</li>
             </ul>
         </details>
+        <hr>
+        <table>
+            <caption>Tabla de ejemplo</caption> <!--Etiqueta que indica el título de la tabla, que se mostrará encima de la tabla. -->
+            <thead> <!--Etiqueta que indica el encabezado de la tabla, que se utiliza para definir las filas y columnas del encabezado de la tabla. -->
+                <tr> <!--Etiqueta que indica una fila de la tabla, que se utiliza para definir una fila en la tabla. -->
+                    <th>Encabezado 1</th> <!--Etiqueta que indica una celda del encabezado de la tabla, que se utiliza para definir una celda en el encabezado de la tabla. -->
+                    <th>Encabezado 2</th>
+                    <th>Encabezado 3</th>
+                </tr>
+            </thead>
+            <tbody> <!--Etiqueta que indica el cuerpo de la tabla, que se utiliza para definir las filas y columnas del cuerpo de la tabla. -->
+                <tr> 
+                    <td>Celda 1</td> <!--Etiqueta que indica una celda del cuerpo de la tabla, que se utiliza para definir una celda en el cuerpo de la tabla. -->
+                    <td>Celda 2</td>
+                    <td>Celda 3</td>
+                </tr>   
+            <tfoot>
+                <tr>
+                    <td class="pie" colspan="3">Pie de tabla</td> <!--Etiqueta que indica el pie de la tabla, que se utiliza para definir las filas y columnas del pie de la tabla. El atributo colspan indica cuántas columnas debe ocupar la celda en el pie de la tabla. -->
+                </tr>
+            </tfoot>    
+        </table>
+        
+        <style>
+            th, td, caption { /* Selecciona todas las celdas de la tabla (th y td) */
+                border-bottom: 1px solid #0004; /* Agrega un borde */
+                padding: 10px;
+                text-align: center;
+            }
+
+            caption{
+                border: 1px solid #0004; /* Agrega un borde */
+            }
+
+            table {
+                width: 500px; /* Ancho de la tabla */
+                margin: auto;
+                border-spacing: 12px;
+                border: 1px solid #0004;
+            }
+
+            .pie {
+                border: none;
+            }
+        </style>
+
+        <hr>
+        <video src="" loop autoplay muted controls poster="miniatura.png">
+            <track src="subcarpeta/subtitulo.vtt" kind="subtitles" srclang="es" label="Español"> <!-- Etiqueta que indica un subtítulo para el video. El atributo src indica la URL del archivo de subtítulos, el atributo kind indica el tipo de pista de texto (en este caso "subtitles" indica que es un subtítulo), el atributo srclang indica el idioma de los subtítulos (en este caso "es" indica español) y el atributo label proporciona una etiqueta para la pista de subtítulos (en este caso "Español") -->
+            Texto que se muestra cuando el video no puede ser mostrado
+        </video> <!-- Etiqueta que indica un video. El atributo src indica la URL del video y el atributo poster proporciona una imagen que se mostrará antes de que el video se reproduzca. El atributo autoplay indica que el video debe reproducirse automáticamente cuando se carga la página, el atributo muted indica que el video debe reproducirse sin sonido y el atributo controls indica que se deben mostrar los controles del reproductor de video. Si el navegador no puede reproducir el video, se mostrará el texto dentro de la etiqueta video como un mensaje alternativo. La etiqueta audio funciona exactamente igual -->
+        <hr>
+        <code>Esta etiqueta sirve para escribir código dentro de una página. Normalmente se le asigna un fondo oscuro y una tipografía clara</code>
     </body>
 </html>

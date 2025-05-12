@@ -146,7 +146,8 @@ ul {
     margin: 0;
     background: red;
     width: 100%;
-    padding: 20px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 .titulo-gradiente {
@@ -218,4 +219,91 @@ ul {
 .pokemon {
     width: 100%;
     filter: drop-shadow(0 0 10px #06fd); /* sombra para imágenes sin fondo, el primer valor es el movimiento a la derecha, el segundo hacia abajo, el tercero el grosor y el último el color */
+}
+
+img[src$=jpg] { /* todas las imágenes con un src que termina en jpg */
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+img[alt="Fondo de pantalla de Zelda"] { /* imagen con un alt específico */
+    width: 50%;
+}
+
+img[alt^="Zelda"] { /* todas las imágenes con un alt que empieza con Zelda */
+    width: 24%;
+}
+
+ul span { /* todos los span dentro de un ul, no importa si es hijo o nieto */
+    color: red;
+}
+
+ul > span { /* todos los span que son hijos directos de un ul */
+    text-decoration: line-through;
+}
+
+.mas-selectores > h2 + p { /* el primer párrafo que sigue inmediatamente a un h2 dentro de la clase mas-selectores */
+    color: blue;
+}
+
+.mas-selectores > h3 ~ p { /* todos los párrafos que siguen a un h2 dentro de la clase mas-selectores */
+    color: green;
+}
+
+/* Como podemos ver, todos estos selectores se pueden combinar y concatenar entre sí para crear selectores más específicos. */
+
+/* !important esta propiedad se usa para forzar que una propiedad tenga prioridad sobre otras, pero no es recomendable usarla a menos que sea necesario */
+
+/* Lista de pseudoclases */
+
+.caja-pseudo {
+    background: #0af;
+    border-radius: 12px;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.caja-pseudo:hover {
+    border: #000 5px solid; /* borde al pasar el mouse */
+    cursor: pointer; /* cambiar el cursor al pasar por encima */
+}
+
+.caja-pseudo:active {
+    background: #f0f;
+    transform: scale(0.9); /* reducir el tamaño al hacer clic */
+}
+
+.lista-pseudo > li:first-child { /* primer elemento de la lista */
+    color: red;
+}
+
+.lista-pseudo > li:last-child { /* último elemento de la lista */
+    color: blue;
+}
+
+.lista-pseudo > li:nth-child(2) { /* segundo elemento de la lista. Podemos elegir el que se especifique dentro del paréntesis */
+    color: green;
+}
+
+.lista-pseudo2 > li:nth-child(2n) { /* cada 2 elementos de la lista */
+    color: rgb(224, 79, 7);
+}
+
+/* La diferencia entre nth-child y nth-of-type en CSS radica en cómo seleccionan los elementos dentro de un contenedor:
+
+1. nth-child Selecciona un elemento basado en su posición relativa a todos los hijos del contenedor, sin importar el tipo de elemento.
+
+2. nth-of-type Selecciona un elemento basado en su posición relativa a otros elementos del mismo tipo dentro del contenedor. */
+
+.lista-pseudo3 > li:not(.excluir) { /* todos los elementos de la lista que no tengan la clase excluir */
+    color: green;
+}
+
+.vacio:empty { /* todos los elementos de la clase vacio que estén vacíos */
+    background: #0005;
+    height: 100px;
+    width: 100px;
+    margin: auto;
 }

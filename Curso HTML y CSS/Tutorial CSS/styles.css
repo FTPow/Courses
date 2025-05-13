@@ -16,7 +16,7 @@ h1 {
     text-align: center;
 }
 
-ul {
+ul, ol {
     list-style-position: inside; /* coloca las viñetas como parte del contenido de la lista */
     text-align: center;
 }
@@ -306,4 +306,116 @@ ul > span { /* todos los span que son hijos directos de un ul */
     height: 100px;
     width: 100px;
     margin: auto;
+}
+
+#pseudo-check {
+    width: 100px;
+    height: 100px;
+}
+
+#pseudo-check:checked { /* cuando el checkbox está marcado */
+    width: 50px;
+    height: 50px;
+}
+
+.divdiv > a:link { /* todos los enlaces dentro de un div que no han sido visitados */
+    color: red;
+}
+
+.divdiv > a:visited { /* todos los enlaces dentro de un div que han sido visitados */
+    color: blue;
+}
+
+.divdiv > input:invalid { /* todos los inputs dentro de un div que son inválidos */
+    border: 2px solid red;
+}
+
+.divdiv > input:valid { /* todos los inputs dentro de un div que son válidos */
+    border: 2px solid green;
+}
+
+.divdiv > input:focus { /* todos los inputs dentro de un div que están en foco */
+    background: #5555;
+}
+
+.divdiv > :where(ul, ol) { /* todos los ul y ol dentro de un div */
+    background: #0005;
+    padding: 10px;
+}
+
+.divdiv > :is(ul, ol) { /* todos los ul y ol dentro de un div pero con mas especificidad que la anterior, sobreescribiendola */
+    background: #0ff5;
+    padding: 10px;
+}
+
+.divdiv:has(ul) { /* todos los div que tienen un ul dentro */
+    background: #ff05;
+    padding: 10px;
+}
+
+p:has(+ul) { /* todos los párrafos que tienen una lista desordenada justo después */
+    font-family: poet;
+    font-size: 20px;
+}
+
+/* Pseudoelementos */
+
+.pseudoelementos > h2::first-letter { /* primera letra del h2 */
+    font-size: 50px;
+    font-weight: bolder;
+    color: saddlebrown;
+}
+
+.pseudoelementos > p::first-line { /* primera línea del p */
+    font-weight: bolder;
+    color: darkred;
+}
+
+.pseudoelementos > input::placeholder { /* texto de ayuda dentro del input */
+    color: darkgreen;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: bolder;
+}
+
+.pseudoelementos li::marker { /* marcador de la lista */
+    color: blueviolet;
+}
+
+.pseudoelementos li::before { /* antes del contenido de la lista */
+    content: "before • "; /* contenido que se agrega antes del elemento */
+    color: blueviolet;
+}
+
+.pseudoelementos li::after { /* después del contenido de la lista */
+    content: " • after"; /* contenido que se agrega después del elemento */
+    color: blueviolet;
+}
+
+.lista {
+    border: 2px solid black;
+    border-radius: 12px;
+    font-size: 25px;
+    padding: 0;
+}
+
+.lista__item {
+    padding: 10px;
+    background: #0005;
+    border-radius: 12px;
+    margin: 10px;
+    list-style-type: none; /* quitar las viñetas */
+}
+
+.item--bueno {
+    background: #0f05;
+}
+
+.item--malo {
+    background: #f005;
+}
+
+.lista--vieja {
+    background: #0005;
+    opacity: 0.5;
 }

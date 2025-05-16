@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.nav {
+    background: #48e;
+}
+
+.nav__list {
+    margin: 0;
+    text-align: center;
+}
+
+.nav__item {
+    display: inline-block;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    background: #48e;
+    display: inline-block;
+}
+
+.nav__link:hover {
+    background: #59e;
+}
+
+.link--button {
+    background: #fff;
+    color: #48e;
+    padding: 5px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    margin-left: 100px;
+}
+
+.link--button:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.link--button:active {
+    background: #6af
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: #48e;
+    margin: 10px auto;
+    border-radius: 10px;
+    font-size: large;
+    text-align: center;
+    border: 2px solid #000;
+    position: relative; /* Esto hace que las cajas se posicionen en relación a su contenedor */
+}
+
+.box--red {
+    background: #e48;
+    right: 50px;
+    top: 50px;
+    z-index: 1; /* Esto hace que el cuadro rojo esté por encima del azul */
+}
+
+.container {
+    position: relative; /* Esto hace que los hijos se posicionen en relación a este contenedor */
+    height: 300px;
+    width: 300px;
+    margin: 10px auto;
+    background: #ccc;
+    border-radius: 10px;
+    border: 2px solid #000;
+    font-size: large;
+    text-align: center;
+}
+
+.box--green {
+    background: #8e4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+dialog {
+    border: none;
+    background-color: #0009;
+    height: 100vh;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.modal__content {
+    width: 80%;
+    background: #fff;
+    border-radius: 10px;
+    border: 2px solid #000;
+    font-size: large;
+    padding: 10px 20px;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.modal__title {
+    margin-top: 10px;
+}
+
+.modal__close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    border: none;
+    width: 30px;
+    height: 30px;
+}

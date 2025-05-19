@@ -90,7 +90,7 @@ body {
 dialog {
     border: none;
     background-color: #0009;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
     z-index: 2;
 }

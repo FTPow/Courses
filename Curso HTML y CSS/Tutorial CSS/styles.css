@@ -221,7 +221,7 @@ ul, ol {
     filter: drop-shadow(0 0 10px #06fd); /* sombra para imágenes sin fondo, el primer valor es el movimiento a la derecha, el segundo hacia abajo, el tercero el grosor y el último el color */
 }
 
-img[src$=jpg] { /* todas las imágenes con un src que termina en jpg */
+.zeldaa > img[src$=jpg] { /* todas las imágenes con un src que termina en jpg */
     margin: 20px 0;
     border-radius: 12px;
 }
@@ -418,4 +418,90 @@ p:has(+ul) { /* todos los párrafos que tienen una lista desordenada justo despu
 .lista--vieja {
     background: #0005;
     opacity: 0.5;
+}
+
+.transition-box {
+    margin: 40px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+}
+
+.box--pink {
+    background: #f3a;
+    transition: all 0.5s ease 0.5s; /* transición de todas las propiedades en 0.5 segundos. Este shorthand solo funciona para aplicar un solo tipo de transición */
+}
+
+.box--pink:hover {
+    background: #0af;
+    transform: rotate(180deg); /* rotar 180 grados */
+    box-shadow: 0 0 20px 0 #0007;
+}
+
+.box--blue {
+    background: #0af;
+    transition-property: all; /* propiedad a la que se le aplicará la transición */
+    transition-duration: 0.5s; /* duración de la transición */
+    transition-timing-function: ease; /* función de tiempo de la transición. Esto también es personalizable gracias a cubic-bezier */
+    transition-delay: 0.5s; /* retraso de la transición */
+    /* transition: all 0.5s ease 0.5s; shorthand para aplicar todas las propiedades de transición */
+}
+
+.box--blue:hover {
+    background: #f3a;
+    transform: rotate(-180deg);
+    box-shadow: 0 0 20px 0 #0007;
+}
+
+.overflow {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    overflow: auto; /* agregar scroll si el contenido es mayor al contenedor. También puede modificarse esta propiedad únicamente en el eje X o Y y puede establecerse como hidden, clip o visible. */
+}
+
+.overflow2 {
+    margin: 20px auto;
+    width: 300px;
+    height: 150px;
+    border: 2px solid #000;
+}
+
+.overflow-title {
+    font-size: 25px;
+    text-align: center;
+    text-wrap: balance; /* balancear el texto en un título generalmente */
+}
+
+.notextwrap {
+    font-size: 25px;
+    text-align: center;
+}
+
+.overflow3 {
+    margin: 20px auto;
+    width: 200px;
+    height: 80px;
+    border: 2px solid #000;
+    overflow-wrap: anywhere; /* permitir el salto de línea en cualquier lugar, solo cuando una palabra es demasiado larga y se desborda */
+    text-wrap: pretty; /* es como el text-wrap: balance, pero en párrafos */
+}
+
+.hidden {
+    text-overflow: ellipsis; /* agregar puntos suspensivos al final del texto si se desborda */
+    overflow: hidden; /* ocultar el desbordamiento */
+    white-space: nowrap; /* evitar el salto de línea */
+}
+
+.object-img {
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000;
+    object-fit: scale-down; /* ajustar la imagen al contenedor sin distorsionarla */
+    object-position: center; /* centrar la imagen dentro del contenedor */
 }

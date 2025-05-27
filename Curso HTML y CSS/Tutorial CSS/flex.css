@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: row-reverse; /* Esta propiedad nos permite establecer la dirección en la que se alinean los flex item dentro de la flexbox. Row va por defecto en la misma dirección del texto, en este caso de izquierda a derecha. Column va de arriba a abajo. Si le agregamos -reverse al final de row o column, se invierte la dirección */
+}
+
+.flex-item {
+    width: 350px;
+    background-color: #800;
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+
+.flex-item:first-child {
+    background-color: #f77;
+}
+
+.flex-item:last-child {
+    background-color: #000;
+}
